@@ -16,10 +16,7 @@ namespace Cyanair20012020
         //Create a new form
         Form book_flights = new book_flights();
 
-        //Lists with the airports's name
-        List<String> airports_permanent = new List<string>();
-        List<String> airports_temporary = new List<string>();
-
+      
         public search_flights()
         {
             InitializeComponent();
@@ -55,25 +52,14 @@ namespace Cyanair20012020
                 using (OleDbConnection conn = new OleDbConnection(strCon))
                 {
                     conn.Open();
-                    string strSql = "SELECT Descriptions FROM CyanairAirports";
+                    string strSql = "SELECT * FROM CyanairAirports";
                     OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
-                  
-                    //Add all the airports from the table to airports_permanent list
-                    foreach (DataRow row in ds.Tables[0].Rows)
-                    {
-                       
-                        airports_permanent.Add(row["Descriptions"].ToString());
-                    }
-
-                    from_airport_comboBox.DataSource = airports_permanent;
-
-                    //the below foreach statement to be deleted
-                    foreach (object o in airports_permanent)
-                    {
-                        Console.WriteLine("item: " + o);
-                    }
+                    from_airport_comboBox.DataSource = ds.Tables[0];
+                    from_airport_comboBox.DisplayMember = "Descriptions";
+                    from_airport_comboBox.ValueMember = "Airport Codes";
+                    
                 }
             }
             catch (Exception ex)
@@ -85,7 +71,7 @@ namespace Cyanair20012020
         //This method handles the changes in the combobox
         private void from_airport_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Console.WriteLine(from_airport_comboBox.SelectedValue.ToString());
         }
             
         //Hide the search_flights form
