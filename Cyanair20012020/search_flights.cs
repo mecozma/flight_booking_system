@@ -84,11 +84,31 @@ namespace Cyanair20012020
                     conn.Open();
                     string strSql = "SELECT * FROM CyanairAirports";
                     OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
-                    DataSet ds = new DataSet();
+                    DataTable ds = new DataTable();
                     adapter.Fill(ds);
-                   
+
+                    //Adapt this code to add an empty entri in the combobox
+                    DataRow row = dataTable.NewRow();
+
+                    row["Code"] = "None";
+
+                    row["Name"] = "None";
+
+                    dataTable.Rows.InsertAt(row, 0);
+
+                    comboBox1.DisplayMember = "Name";
+
+                    comboBox1.ValueMember = "Code";
+
+
+
+                    comboBox1.DataSource = dataTable;
+
+
+
+                    
                     //populate to_airport_combobox
-                    to_airport_comboBox.DataSource = ds.Tables[0];
+                    to_airport_comboBox.DataSource = ds;
                     to_airport_comboBox.DisplayMember = "Descriptions";
                     to_airport_comboBox.ValueMember = "Airport Codes";
 
@@ -120,9 +140,10 @@ namespace Cyanair20012020
             String arrival_airport = to_airport_comboBox.Text;
             String flight_dates = flight_date.Value.ToShortDateString();
           // String passengers_no = passengers_no.Value;  // this line wont work
-           
+            Console.WriteLine("Departure airport: " + departure_airport + "code: " + from_airport_comboBox.SelectedValue.ToString());
+            Console.WriteLine("Arrival airport: " + arrival_airport + "code" + to_airport_comboBox.SelectedValue.ToString());
 
-            if (departure_airport != arrival_airport && flight_date.Value.Date > DateTime.Today)
+            if (departure_airport != arrival_airport) // && flight_date.Value.Date >= DateTime.Today   add this here
             {
                 AppDomain.CurrentDomain.SetData("DataDirectory", @"\\prod\ServiceRequests");
                 //connection string
@@ -133,7 +154,9 @@ namespace Cyanair20012020
                     using (OleDbConnection conn = new OleDbConnection(strCon))
                     {
                         conn.Open();
-                        string strSql = "SELECT * FROM CyanairSchedule";
+                        string strSql = "SELECT * FROM CyanairSchedule WHERE Date LIKE '%" 
+                            + flight_dates + "%' AND '%" 
+                            + departure_airport + "%' AND '%" + arrival_airport + "%' ORDER BY Time DESC";
                         OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
                         
 
@@ -160,15 +183,5 @@ namespace Cyanair20012020
                 MessageBox.Show("Oops! One of the fields is empty.");
             }
         }
-
-        
-
-       
-
-       
-
-        
-        
-       
     }
 }

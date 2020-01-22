@@ -308,8 +308,8 @@
             this.from_airport_comboBox.Location = new System.Drawing.Point(66, 28);
             this.from_airport_comboBox.Name = "from_airport_comboBox";
             this.from_airport_comboBox.Size = new System.Drawing.Size(121, 21);
-            this.from_airport_comboBox.Sorted = true;
             this.from_airport_comboBox.TabIndex = 13;
+            this.from_airport_comboBox.ValueMember = "Airport Codes";
             this.from_airport_comboBox.SelectedIndexChanged += new System.EventHandler(this.from_airport_comboBox_SelectedIndexChanged);
             // 
             // to_airport_comboBox
@@ -318,7 +318,6 @@
             this.to_airport_comboBox.Location = new System.Drawing.Point(66, 91);
             this.to_airport_comboBox.Name = "to_airport_comboBox";
             this.to_airport_comboBox.Size = new System.Drawing.Size(121, 21);
-            this.to_airport_comboBox.Sorted = true;
             this.to_airport_comboBox.TabIndex = 14;
             // 
             // return_flight_checkbox
