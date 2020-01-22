@@ -37,7 +37,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cyanairAirportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cyanairDataSet = new Cyanair20012020.cyanairDataSet();
-            this.departure_date_comboBox = new System.Windows.Forms.ComboBox();
             this.travel_class_comboBox = new System.Windows.Forms.ComboBox();
             this.search_flights_btn = new System.Windows.Forms.Button();
             this.cancel_search_flights_btn = new System.Windows.Forms.Button();
@@ -63,6 +62,8 @@
             this.passengers_no = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.flight_date = new System.Windows.Forms.DateTimePicker();
+            this.filtered_flights = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingNavigator)).BeginInit();
@@ -70,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passengers_no)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filtered_flights)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,7 +113,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(534, 92);
+            this.label5.Location = new System.Drawing.Point(512, 36);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 4;
@@ -127,14 +129,6 @@
             this.cyanairDataSet.DataSetName = "cyanairDataSet";
             this.cyanairDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // departure_date_comboBox
-            // 
-            this.departure_date_comboBox.FormattingEnabled = true;
-            this.departure_date_comboBox.Location = new System.Drawing.Point(364, 89);
-            this.departure_date_comboBox.Name = "departure_date_comboBox";
-            this.departure_date_comboBox.Size = new System.Drawing.Size(121, 21);
-            this.departure_date_comboBox.TabIndex = 7;
-            // 
             // travel_class_comboBox
             // 
             this.travel_class_comboBox.FormattingEnabled = true;
@@ -142,7 +136,7 @@
             "Economy",
             "Business",
             "First"});
-            this.travel_class_comboBox.Location = new System.Drawing.Point(631, 91);
+            this.travel_class_comboBox.Location = new System.Drawing.Point(628, 33);
             this.travel_class_comboBox.Name = "travel_class_comboBox";
             this.travel_class_comboBox.Size = new System.Drawing.Size(121, 21);
             this.travel_class_comboBox.TabIndex = 9;
@@ -330,7 +324,7 @@
             // return_flight_checkbox
             // 
             this.return_flight_checkbox.AutoSize = true;
-            this.return_flight_checkbox.Location = new System.Drawing.Point(631, 157);
+            this.return_flight_checkbox.Location = new System.Drawing.Point(628, 89);
             this.return_flight_checkbox.Name = "return_flight_checkbox";
             this.return_flight_checkbox.Size = new System.Drawing.Size(15, 14);
             this.return_flight_checkbox.TabIndex = 15;
@@ -361,7 +355,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(537, 157);
+            this.label6.Location = new System.Drawing.Point(512, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 13);
             this.label6.TabIndex = 17;
@@ -369,8 +363,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.flight_date);
             this.groupBox2.Controls.Add(this.from_airport_comboBox);
+            this.groupBox2.Controls.Add(this.return_flight_checkbox);
             this.groupBox2.Controls.Add(this.to_airport_comboBox);
+            this.groupBox2.Controls.Add(this.travel_class_comboBox);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(24, 63);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(838, 145);
@@ -378,20 +377,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Outbound Flight";
             // 
+            // flight_date
+            // 
+            this.flight_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.flight_date.Location = new System.Drawing.Point(340, 31);
+            this.flight_date.Name = "flight_date";
+            this.flight_date.Size = new System.Drawing.Size(120, 20);
+            this.flight_date.TabIndex = 31;
+            this.flight_date.Value = new System.DateTime(2020, 1, 22, 0, 0, 0, 0);
+            // 
+            // filtered_flights
+            // 
+            this.filtered_flights.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.filtered_flights.Location = new System.Drawing.Point(24, 354);
+            this.filtered_flights.Name = "filtered_flights";
+            this.filtered_flights.Size = new System.Drawing.Size(838, 150);
+            this.filtered_flights.TabIndex = 31;
+            // 
             // search_flights
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 516);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.filtered_flights);
             this.Controls.Add(this.passengers_no);
-            this.Controls.Add(this.return_flight_checkbox);
             this.Controls.Add(this.cyanairAirportsBindingNavigator);
             this.Controls.Add(this.cancel_search_flights_btn);
             this.Controls.Add(this.search_flights_btn);
-            this.Controls.Add(this.travel_class_comboBox);
-            this.Controls.Add(this.departure_date_comboBox);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -408,6 +420,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passengers_no)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filtered_flights)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,7 +434,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox departure_date_comboBox;
         private System.Windows.Forms.ComboBox travel_class_comboBox;
         private System.Windows.Forms.Button search_flights_btn;
         private System.Windows.Forms.Button cancel_search_flights_btn;
@@ -448,5 +461,7 @@
         private System.Windows.Forms.NumericUpDown passengers_no;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DateTimePicker flight_date;
+        private System.Windows.Forms.DataGridView filtered_flights;
     }
 }
