@@ -87,22 +87,22 @@ namespace Cyanair20012020
                     DataTable ds = new DataTable();
                     adapter.Fill(ds);
 
-                    //Adapt this code to add an empty entri in the combobox
-                    DataRow row = dataTable.NewRow();
+                    //Adapt this code to add an empty entry in the combobox
+                  //  DataRow row = dataTable.NewRow();
 
-                    row["Code"] = "None";
+                   // row["Code"] = "None";
 
-                    row["Name"] = "None";
+                  //  row["Name"] = "None";
 
-                    dataTable.Rows.InsertAt(row, 0);
+                  //  dataTable.Rows.InsertAt(row, 0);
 
-                    comboBox1.DisplayMember = "Name";
+                  //  comboBox1.DisplayMember = "Name";
 
-                    comboBox1.ValueMember = "Code";
+                  //  comboBox1.ValueMember = "Code";
 
 
 
-                    comboBox1.DataSource = dataTable;
+                   // comboBox1.DataSource = dataTable;
 
 
 
@@ -136,12 +136,13 @@ namespace Cyanair20012020
         {
             
             //Variable declaration for all the input fields
-            String departure_airport = from_airport_comboBox.Text;
-            String arrival_airport = to_airport_comboBox.Text;
+            String departure_airport = from_airport_comboBox.SelectedValue.ToString();
+            String arrival_airport = to_airport_comboBox.SelectedValue.ToString();
             String flight_dates = flight_date.Value.ToShortDateString();
           // String passengers_no = passengers_no.Value;  // this line wont work
             Console.WriteLine("Departure airport: " + departure_airport + "code: " + from_airport_comboBox.SelectedValue.ToString());
             Console.WriteLine("Arrival airport: " + arrival_airport + "code" + to_airport_comboBox.SelectedValue.ToString());
+            Console.WriteLine("departure airpoty code!!!!: " + departure_airport);
 
             if (departure_airport != arrival_airport) // && flight_date.Value.Date >= DateTime.Today   add this here
             {
@@ -154,9 +155,10 @@ namespace Cyanair20012020
                     using (OleDbConnection conn = new OleDbConnection(strCon))
                     {
                         conn.Open();
-                        string strSql = "SELECT * FROM CyanairSchedule WHERE Date LIKE '%" 
-                            + flight_dates + "%' AND '%" 
-                            + departure_airport + "%' AND '%" + arrival_airport + "%' ORDER BY Time DESC";
+                        string strSql = "SELECT * FROM CyanairSchedule WHERE  Date LIKE '%" + 
+                            flight_dates + "%' AND Departing LIKE '%" + departure_airport + 
+                            "%' AND Arriving LIKE '%" + arrival_airport + 
+                            "%' ORDER BY Time DESC;";
                         OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
                         
 
