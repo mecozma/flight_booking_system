@@ -15,6 +15,7 @@ namespace Cyanair20012020
     {
         //Create a new form
         Form book_flights = new book_flights();
+        DataTable sorted_flights_no = new DataTable();
 
       
         public search_flights()
@@ -32,6 +33,8 @@ namespace Cyanair20012020
 
         private void search_flights_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cyanairDataSet.CyanairSchedule' table. You can move, or remove it, as needed.
+            this.cyanairScheduleTableAdapter.Fill(this.cyanairDataSet.CyanairSchedule);
             // TODO: This line of code loads data into the 'cyanairDataSet.CyanairAirports' table. You can move, or remove it, as needed.
             this.cyanairAirportsTableAdapter.Fill(this.cyanairDataSet.CyanairAirports);
 
@@ -39,6 +42,12 @@ namespace Cyanair20012020
             load_from_airport_comboBox();
             load_to_airport_comboBox();
             //load_departure_date_comboBox();
+        }
+
+        //Generate booking reference number
+        private string generate_booking_reference_number(String client_name)
+        {
+            return string.Format("{0}_{1:N}", client_name, Guid.NewGuid());
         }
 
         // Populate the departure airport combobox
@@ -144,6 +153,16 @@ namespace Cyanair20012020
             Console.WriteLine("Arrival airport: " + arrival_airport + "code" + to_airport_comboBox.SelectedValue.ToString());
             Console.WriteLine("departure airpoty code!!!!: " + departure_airport);
 
+        //Variable used in the ticket booking section
+            //assign values to the departure and arriving disabled textboxes
+            departing_inactive_checkbox.Text = from_airport_comboBox.Text;
+            arriving_inactive_checkbox.Text = to_airport_comboBox.Text;
+            date_inactive_checkbox.Text = flight_dates;
+           
+            //test booking reference
+            String reference_number = generate_booking_reference_number("Robocop");
+            MessageBox.Show(reference_number);
+
             if (departure_airport != arrival_airport) // && flight_date.Value.Date >= DateTime.Today   add this here
             {
                 AppDomain.CurrentDomain.SetData("DataDirectory", @"\\prod\ServiceRequests");
@@ -161,7 +180,7 @@ namespace Cyanair20012020
                             "%' ORDER BY Time DESC;";
                         OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
                         
-
+                        
                   
                         // Create a new dataTable that will be filled with the data processed/filtered by the myAdapter from the database
                         DataTable filteredData = new DataTable();
@@ -169,6 +188,18 @@ namespace Cyanair20012020
                         adapter.Fill(filteredData);
                         //The dataGridView added to the frmSearch form is populated with data
                         filtered_flights.DataSource = filteredData;
+
+                        //Asign flightnumber to the flight ckeckbox in order to create the ticket
+                       flight_no_comboBox.DataSource = filteredData;
+                       flight_no_comboBox.DisplayMember = "Flight No";
+                       flight_no_comboBox.ValueMember = "Flight No";
+
+                        //Loop through table to find the selected flight
+                       sorted_flights_no = filteredData;
+                      
+
+                      
+
                         //the connection to the database id closed
                         conn.Close();
 
@@ -183,6 +214,16 @@ namespace Cyanair20012020
             else
             {
                 MessageBox.Show("Oops! One of the fields is empty.");
+            }
+        }
+
+        private void flight_no_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (DataRow row in sorted_flights_no.Rows)
+            {
+                Console.WriteLine(flight_no_comboBox.DisplayMember == row["Flight no"].ToString());
+                Console.WriteLine(row["Time"].ToString());
+                break;
             }
         }
     }

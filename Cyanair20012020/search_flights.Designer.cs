@@ -72,17 +72,25 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.date_inactive_checkbox = new System.Windows.Forms.TextBox();
+            this.arriving_inactive_checkbox = new System.Windows.Forms.TextBox();
+            this.departing_inactive_checkbox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.economy_class_radioButton = new System.Windows.Forms.RadioButton();
+            this.business_class_radioButton = new System.Windows.Forms.RadioButton();
+            this.first_class_radioButton = new System.Windows.Forms.RadioButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.passport_number_textBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.email_checkbox_checkbox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.flight_no_comboBox = new System.Windows.Forms.ComboBox();
+            this.cyanairScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cyanairScheduleTableAdapter = new Cyanair20012020.cyanairDataSetTableAdapters.CyanairScheduleTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingNavigator)).BeginInit();
@@ -93,6 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.filtered_flights)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cyanairScheduleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -426,14 +435,20 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.flight_no_comboBox);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.email_checkbox_checkbox);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.passport_number_textBox);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.departing_inactive_checkbox);
+            this.groupBox1.Controls.Add(this.arriving_inactive_checkbox);
+            this.groupBox1.Controls.Add(this.date_inactive_checkbox);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -495,26 +510,29 @@
             this.textBox3.Size = new System.Drawing.Size(130, 20);
             this.textBox3.TabIndex = 5;
             // 
-            // textBox4
+            // date_inactive_checkbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(108, 217);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(130, 20);
-            this.textBox4.TabIndex = 6;
+            this.date_inactive_checkbox.Enabled = false;
+            this.date_inactive_checkbox.Location = new System.Drawing.Point(108, 217);
+            this.date_inactive_checkbox.Name = "date_inactive_checkbox";
+            this.date_inactive_checkbox.Size = new System.Drawing.Size(130, 20);
+            this.date_inactive_checkbox.TabIndex = 6;
             // 
-            // textBox5
+            // arriving_inactive_checkbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(107, 173);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(130, 20);
-            this.textBox5.TabIndex = 7;
+            this.arriving_inactive_checkbox.Enabled = false;
+            this.arriving_inactive_checkbox.Location = new System.Drawing.Point(107, 173);
+            this.arriving_inactive_checkbox.Name = "arriving_inactive_checkbox";
+            this.arriving_inactive_checkbox.Size = new System.Drawing.Size(130, 20);
+            this.arriving_inactive_checkbox.TabIndex = 7;
             // 
-            // textBox6
+            // departing_inactive_checkbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(107, 126);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(130, 20);
-            this.textBox6.TabIndex = 8;
+            this.departing_inactive_checkbox.Enabled = false;
+            this.departing_inactive_checkbox.Location = new System.Drawing.Point(107, 126);
+            this.departing_inactive_checkbox.Name = "departing_inactive_checkbox";
+            this.departing_inactive_checkbox.Size = new System.Drawing.Size(130, 20);
+            this.departing_inactive_checkbox.TabIndex = 8;
             // 
             // label10
             // 
@@ -554,45 +572,104 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.first_class_radioButton);
+            this.panel1.Controls.Add(this.business_class_radioButton);
+            this.panel1.Controls.Add(this.economy_class_radioButton);
             this.panel1.Location = new System.Drawing.Point(107, 291);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 26);
             this.panel1.TabIndex = 13;
             // 
-            // radioButton1
+            // economy_class_radioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, 4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Economy";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.economy_class_radioButton.AutoSize = true;
+            this.economy_class_radioButton.Checked = true;
+            this.economy_class_radioButton.Location = new System.Drawing.Point(3, 4);
+            this.economy_class_radioButton.Name = "economy_class_radioButton";
+            this.economy_class_radioButton.Size = new System.Drawing.Size(69, 17);
+            this.economy_class_radioButton.TabIndex = 0;
+            this.economy_class_radioButton.TabStop = true;
+            this.economy_class_radioButton.Text = "Economy";
+            this.economy_class_radioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // business_class_radioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(94, 4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(67, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "Business";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.business_class_radioButton.AutoSize = true;
+            this.business_class_radioButton.Location = new System.Drawing.Point(94, 4);
+            this.business_class_radioButton.Name = "business_class_radioButton";
+            this.business_class_radioButton.Size = new System.Drawing.Size(67, 17);
+            this.business_class_radioButton.TabIndex = 1;
+            this.business_class_radioButton.Text = "Business";
+            this.business_class_radioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // first_class_radioButton
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(185, 4);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(44, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.Text = "First";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.first_class_radioButton.AutoSize = true;
+            this.first_class_radioButton.Location = new System.Drawing.Point(185, 4);
+            this.first_class_radioButton.Name = "first_class_radioButton";
+            this.first_class_radioButton.Size = new System.Drawing.Size(44, 17);
+            this.first_class_radioButton.TabIndex = 2;
+            this.first_class_radioButton.Text = "First";
+            this.first_class_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(277, 45);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 13);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Passport No:";
+            // 
+            // passport_number_textBox
+            // 
+            this.passport_number_textBox.Location = new System.Drawing.Point(359, 42);
+            this.passport_number_textBox.Name = "passport_number_textBox";
+            this.passport_number_textBox.Size = new System.Drawing.Size(131, 20);
+            this.passport_number_textBox.TabIndex = 14;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(277, 86);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(35, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Email:";
+            // 
+            // email_checkbox_checkbox
+            // 
+            this.email_checkbox_checkbox.Location = new System.Drawing.Point(359, 83);
+            this.email_checkbox_checkbox.Name = "email_checkbox_checkbox";
+            this.email_checkbox_checkbox.Size = new System.Drawing.Size(131, 20);
+            this.email_checkbox_checkbox.TabIndex = 16;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(277, 126);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 13);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "Flight No:";
+            // 
+            // flight_no_comboBox
+            // 
+            this.flight_no_comboBox.FormattingEnabled = true;
+            this.flight_no_comboBox.Location = new System.Drawing.Point(359, 123);
+            this.flight_no_comboBox.Name = "flight_no_comboBox";
+            this.flight_no_comboBox.Size = new System.Drawing.Size(131, 21);
+            this.flight_no_comboBox.TabIndex = 20;
+            this.flight_no_comboBox.SelectedIndexChanged += new System.EventHandler(this.flight_no_comboBox_SelectedIndexChanged);
+            // 
+            // cyanairScheduleBindingSource
+            // 
+            this.cyanairScheduleBindingSource.DataMember = "CyanairSchedule";
+            this.cyanairScheduleBindingSource.DataSource = this.cyanairDataSet;
+            // 
+            // cyanairScheduleTableAdapter
+            // 
+            this.cyanairScheduleTableAdapter.ClearBeforeFill = true;
             // 
             // search_flights
             // 
@@ -627,6 +704,7 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cyanairScheduleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -671,21 +749,29 @@
         private cyanairDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton first_class_radioButton;
+        private System.Windows.Forms.RadioButton business_class_radioButton;
+        private System.Windows.Forms.RadioButton economy_class_radioButton;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox departing_inactive_checkbox;
+        private System.Windows.Forms.TextBox arriving_inactive_checkbox;
+        private System.Windows.Forms.TextBox date_inactive_checkbox;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox passport_number_textBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox email_checkbox_checkbox;
+        private System.Windows.Forms.ComboBox flight_no_comboBox;
+        private System.Windows.Forms.BindingSource cyanairScheduleBindingSource;
+        private cyanairDataSetTableAdapters.CyanairScheduleTableAdapter cyanairScheduleTableAdapter;
     }
 }
