@@ -35,15 +35,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cyanairAirportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cyanairDataSet = new Cyanair20012020.cyanairDataSet();
             this.travel_class_comboBox = new System.Windows.Forms.ComboBox();
             this.search_flights_btn = new System.Windows.Forms.Button();
             this.cancel_search_flights_btn = new System.Windows.Forms.Button();
-            this.cyanairAirportsTableAdapter = new Cyanair20012020.cyanairDataSetTableAdapters.CyanairAirportsTableAdapter();
-            this.tableAdapterManager = new Cyanair20012020.cyanairDataSetTableAdapters.TableAdapterManager();
             this.cyanairAirportsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.cyanairAirportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cyanairDataSet = new Cyanair20012020.cyanairDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -55,7 +53,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.cyanairAirportsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.cyanairDataSet1 = new Cyanair20012020.cyanairDataSet();
             this.from_airport_comboBox = new System.Windows.Forms.ComboBox();
             this.to_airport_comboBox = new System.Windows.Forms.ComboBox();
             this.return_flight_checkbox = new System.Windows.Forms.CheckBox();
@@ -64,44 +61,56 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.flight_date = new System.Windows.Forms.DateTimePicker();
             this.filtered_flights = new System.Windows.Forms.DataGridView();
-            this.tableAdapterManager1 = new Cyanair20012020.cyanairDataSetTableAdapters.TableAdapterManager();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.date_inactive_checkbox = new System.Windows.Forms.TextBox();
-            this.arriving_inactive_checkbox = new System.Windows.Forms.TextBox();
-            this.departing_inactive_checkbox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.economy_class_radioButton = new System.Windows.Forms.RadioButton();
-            this.business_class_radioButton = new System.Windows.Forms.RadioButton();
-            this.first_class_radioButton = new System.Windows.Forms.RadioButton();
-            this.label14 = new System.Windows.Forms.Label();
-            this.passport_number_textBox = new System.Windows.Forms.TextBox();
+            this.flight_date_textBox = new System.Windows.Forms.TextBox();
+            this.cyanairScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flight_no_comboBox = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.email_checkbox_checkbox = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.flight_no_comboBox = new System.Windows.Forms.ComboBox();
-            this.cyanairScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.passport_number_textBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.first_class_radioButton = new System.Windows.Forms.RadioButton();
+            this.business_class_radioButton = new System.Windows.Forms.RadioButton();
+            this.economy_class_radioButton = new System.Windows.Forms.RadioButton();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.departing_inactive_comboBox = new System.Windows.Forms.TextBox();
+            this.arriving_inactive_checkbox = new System.Windows.Forms.TextBox();
+            this.time_inactive_checkBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cyanairAirportsTableAdapter = new Cyanair20012020.cyanairDataSetTableAdapters.CyanairAirportsTableAdapter();
+            this.tableAdapterManager = new Cyanair20012020.cyanairDataSetTableAdapters.TableAdapterManager();
+            this.cyanairDataSet1 = new Cyanair20012020.cyanairDataSet();
+            this.tableAdapterManager1 = new Cyanair20012020.cyanairDataSetTableAdapters.TableAdapterManager();
             this.cyanairScheduleTableAdapter = new Cyanair20012020.cyanairDataSetTableAdapters.CyanairScheduleTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet)).BeginInit();
+            this.flightNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.arrivingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.economyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.businessDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingNavigator)).BeginInit();
             this.cyanairAirportsBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passengers_no)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.filtered_flights)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairScheduleBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -149,16 +158,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Travel class";
             // 
-            // cyanairAirportsBindingSource
-            // 
-            this.cyanairAirportsBindingSource.DataMember = "CyanairAirports";
-            this.cyanairAirportsBindingSource.DataSource = this.cyanairDataSet;
-            // 
-            // cyanairDataSet
-            // 
-            this.cyanairDataSet.DataSetName = "cyanairDataSet";
-            this.cyanairDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // travel_class_comboBox
             // 
             this.travel_class_comboBox.FormattingEnabled = true;
@@ -190,18 +189,6 @@
             this.cancel_search_flights_btn.Text = "Go Back";
             this.cancel_search_flights_btn.UseVisualStyleBackColor = true;
             this.cancel_search_flights_btn.Click += new System.EventHandler(this.cancel_search_flights_btn_Click);
-            // 
-            // cyanairAirportsTableAdapter
-            // 
-            this.cyanairAirportsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CyanairAirportsTableAdapter = this.cyanairAirportsTableAdapter;
-            this.tableAdapterManager.CyanairReservationTableAdapter = null;
-            this.tableAdapterManager.CyanairScheduleTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Cyanair20012020.cyanairDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // cyanairAirportsBindingNavigator
             // 
@@ -241,6 +228,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // cyanairAirportsBindingSource
+            // 
+            this.cyanairAirportsBindingSource.DataMember = "CyanairAirports";
+            this.cyanairAirportsBindingSource.DataSource = this.cyanairDataSet;
+            // 
+            // cyanairDataSet
+            // 
+            this.cyanairDataSet.DataSetName = "cyanairDataSet";
+            this.cyanairDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -326,11 +323,6 @@
             this.cyanairAirportsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.cyanairAirportsBindingNavigatorSaveItem.Text = "Save Data";
             this.cyanairAirportsBindingNavigatorSaveItem.Click += new System.EventHandler(this.cyanairAirportsBindingNavigatorSaveItem_Click);
-            // 
-            // cyanairDataSet1
-            // 
-            this.cyanairDataSet1.DataSetName = "cyanairDataSet";
-            this.cyanairDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // from_airport_comboBox
             // 
@@ -418,23 +410,28 @@
             // 
             // filtered_flights
             // 
+            this.filtered_flights.AutoGenerateColumns = false;
             this.filtered_flights.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.filtered_flights.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.flightNoDataGridViewTextBoxColumn,
+            this.departingDataGridViewTextBoxColumn,
+            this.arrivingDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.economyDataGridViewTextBoxColumn,
+            this.businessDataGridViewTextBoxColumn,
+            this.firstDataGridViewTextBoxColumn,
+            this.durationDataGridViewTextBoxColumn});
+            this.filtered_flights.DataSource = this.cyanairScheduleBindingSource;
             this.filtered_flights.Location = new System.Drawing.Point(24, 354);
             this.filtered_flights.Name = "filtered_flights";
             this.filtered_flights.Size = new System.Drawing.Size(838, 150);
             this.filtered_flights.TabIndex = 31;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.CyanairAirportsTableAdapter = null;
-            this.tableAdapterManager1.CyanairReservationTableAdapter = null;
-            this.tableAdapterManager1.CyanairScheduleTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = Cyanair20012020.cyanairDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.filtered_flights.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.filtered_flights_CellContentClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.flight_date_textBox);
             this.groupBox1.Controls.Add(this.flight_no_comboBox);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
@@ -446,10 +443,9 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.departing_inactive_checkbox);
+            this.groupBox1.Controls.Add(this.departing_inactive_comboBox);
             this.groupBox1.Controls.Add(this.arriving_inactive_checkbox);
-            this.groupBox1.Controls.Add(this.date_inactive_checkbox);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.time_inactive_checkBox);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label8);
@@ -462,171 +458,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Client\'s details";
             // 
-            // textBox1
+            // flight_date_textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 0;
+            this.flight_date_textBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cyanairScheduleBindingSource, "Date", true));
+            this.flight_date_textBox.Location = new System.Drawing.Point(107, 217);
+            this.flight_date_textBox.Name = "flight_date_textBox";
+            this.flight_date_textBox.Size = new System.Drawing.Size(130, 20);
+            this.flight_date_textBox.TabIndex = 22;
             // 
-            // label7
+            // cyanairScheduleBindingSource
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "First name:";
+            this.cyanairScheduleBindingSource.DataMember = "CyanairSchedule";
+            this.cyanairScheduleBindingSource.DataSource = this.cyanairDataSet;
             // 
-            // label8
+            // flight_no_comboBox
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 86);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Last name:";
+            this.flight_no_comboBox.FormattingEnabled = true;
+            this.flight_no_comboBox.Location = new System.Drawing.Point(359, 123);
+            this.flight_no_comboBox.Name = "flight_no_comboBox";
+            this.flight_no_comboBox.Size = new System.Drawing.Size(131, 21);
+            this.flight_no_comboBox.TabIndex = 20;
             // 
-            // textBox2
+            // label16
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 126);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Departing:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(107, 259);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // date_inactive_checkbox
-            // 
-            this.date_inactive_checkbox.Enabled = false;
-            this.date_inactive_checkbox.Location = new System.Drawing.Point(108, 217);
-            this.date_inactive_checkbox.Name = "date_inactive_checkbox";
-            this.date_inactive_checkbox.Size = new System.Drawing.Size(130, 20);
-            this.date_inactive_checkbox.TabIndex = 6;
-            // 
-            // arriving_inactive_checkbox
-            // 
-            this.arriving_inactive_checkbox.Enabled = false;
-            this.arriving_inactive_checkbox.Location = new System.Drawing.Point(107, 173);
-            this.arriving_inactive_checkbox.Name = "arriving_inactive_checkbox";
-            this.arriving_inactive_checkbox.Size = new System.Drawing.Size(130, 20);
-            this.arriving_inactive_checkbox.TabIndex = 7;
-            // 
-            // departing_inactive_checkbox
-            // 
-            this.departing_inactive_checkbox.Enabled = false;
-            this.departing_inactive_checkbox.Location = new System.Drawing.Point(107, 126);
-            this.departing_inactive_checkbox.Name = "departing_inactive_checkbox";
-            this.departing_inactive_checkbox.Size = new System.Drawing.Size(130, 20);
-            this.departing_inactive_checkbox.TabIndex = 8;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 259);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Time:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(24, 220);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(33, 13);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Date:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(24, 172);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 13);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Arriving";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(24, 291);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 13);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Seat type:";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.first_class_radioButton);
-            this.panel1.Controls.Add(this.business_class_radioButton);
-            this.panel1.Controls.Add(this.economy_class_radioButton);
-            this.panel1.Location = new System.Drawing.Point(107, 291);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 26);
-            this.panel1.TabIndex = 13;
-            // 
-            // economy_class_radioButton
-            // 
-            this.economy_class_radioButton.AutoSize = true;
-            this.economy_class_radioButton.Checked = true;
-            this.economy_class_radioButton.Location = new System.Drawing.Point(3, 4);
-            this.economy_class_radioButton.Name = "economy_class_radioButton";
-            this.economy_class_radioButton.Size = new System.Drawing.Size(69, 17);
-            this.economy_class_radioButton.TabIndex = 0;
-            this.economy_class_radioButton.TabStop = true;
-            this.economy_class_radioButton.Text = "Economy";
-            this.economy_class_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // business_class_radioButton
-            // 
-            this.business_class_radioButton.AutoSize = true;
-            this.business_class_radioButton.Location = new System.Drawing.Point(94, 4);
-            this.business_class_radioButton.Name = "business_class_radioButton";
-            this.business_class_radioButton.Size = new System.Drawing.Size(67, 17);
-            this.business_class_radioButton.TabIndex = 1;
-            this.business_class_radioButton.Text = "Business";
-            this.business_class_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // first_class_radioButton
-            // 
-            this.first_class_radioButton.AutoSize = true;
-            this.first_class_radioButton.Location = new System.Drawing.Point(185, 4);
-            this.first_class_radioButton.Name = "first_class_radioButton";
-            this.first_class_radioButton.Size = new System.Drawing.Size(44, 17);
-            this.first_class_radioButton.TabIndex = 2;
-            this.first_class_radioButton.Text = "First";
-            this.first_class_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(277, 45);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Passport No:";
-            // 
-            // passport_number_textBox
-            // 
-            this.passport_number_textBox.Location = new System.Drawing.Point(359, 42);
-            this.passport_number_textBox.Name = "passport_number_textBox";
-            this.passport_number_textBox.Size = new System.Drawing.Size(131, 20);
-            this.passport_number_textBox.TabIndex = 14;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(277, 126);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 13);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "Flight No:";
             // 
             // label15
             // 
@@ -644,32 +504,250 @@
             this.email_checkbox_checkbox.Size = new System.Drawing.Size(131, 20);
             this.email_checkbox_checkbox.TabIndex = 16;
             // 
-            // label16
+            // label14
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(277, 126);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 13);
-            this.label16.TabIndex = 19;
-            this.label16.Text = "Flight No:";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(277, 45);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 13);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Passport No:";
             // 
-            // flight_no_comboBox
+            // passport_number_textBox
             // 
-            this.flight_no_comboBox.FormattingEnabled = true;
-            this.flight_no_comboBox.Location = new System.Drawing.Point(359, 123);
-            this.flight_no_comboBox.Name = "flight_no_comboBox";
-            this.flight_no_comboBox.Size = new System.Drawing.Size(131, 21);
-            this.flight_no_comboBox.TabIndex = 20;
-            this.flight_no_comboBox.SelectedIndexChanged += new System.EventHandler(this.flight_no_comboBox_SelectedIndexChanged);
+            this.passport_number_textBox.Location = new System.Drawing.Point(359, 42);
+            this.passport_number_textBox.Name = "passport_number_textBox";
+            this.passport_number_textBox.Size = new System.Drawing.Size(131, 20);
+            this.passport_number_textBox.TabIndex = 14;
             // 
-            // cyanairScheduleBindingSource
+            // panel1
             // 
-            this.cyanairScheduleBindingSource.DataMember = "CyanairSchedule";
-            this.cyanairScheduleBindingSource.DataSource = this.cyanairDataSet;
+            this.panel1.Controls.Add(this.first_class_radioButton);
+            this.panel1.Controls.Add(this.business_class_radioButton);
+            this.panel1.Controls.Add(this.economy_class_radioButton);
+            this.panel1.Location = new System.Drawing.Point(107, 291);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(274, 26);
+            this.panel1.TabIndex = 13;
+            // 
+            // first_class_radioButton
+            // 
+            this.first_class_radioButton.AutoSize = true;
+            this.first_class_radioButton.Location = new System.Drawing.Point(185, 4);
+            this.first_class_radioButton.Name = "first_class_radioButton";
+            this.first_class_radioButton.Size = new System.Drawing.Size(44, 17);
+            this.first_class_radioButton.TabIndex = 2;
+            this.first_class_radioButton.Text = "First";
+            this.first_class_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // business_class_radioButton
+            // 
+            this.business_class_radioButton.AutoSize = true;
+            this.business_class_radioButton.Location = new System.Drawing.Point(94, 4);
+            this.business_class_radioButton.Name = "business_class_radioButton";
+            this.business_class_radioButton.Size = new System.Drawing.Size(67, 17);
+            this.business_class_radioButton.TabIndex = 1;
+            this.business_class_radioButton.Text = "Business";
+            this.business_class_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // economy_class_radioButton
+            // 
+            this.economy_class_radioButton.AutoSize = true;
+            this.economy_class_radioButton.Checked = true;
+            this.economy_class_radioButton.Location = new System.Drawing.Point(3, 4);
+            this.economy_class_radioButton.Name = "economy_class_radioButton";
+            this.economy_class_radioButton.Size = new System.Drawing.Size(69, 17);
+            this.economy_class_radioButton.TabIndex = 0;
+            this.economy_class_radioButton.TabStop = true;
+            this.economy_class_radioButton.Text = "Economy";
+            this.economy_class_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(24, 291);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(55, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Seat type:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(24, 172);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(42, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Arriving";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(24, 220);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(33, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Date:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(24, 259);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Time:";
+            // 
+            // departing_inactive_comboBox
+            // 
+            this.departing_inactive_comboBox.Enabled = false;
+            this.departing_inactive_comboBox.Location = new System.Drawing.Point(107, 126);
+            this.departing_inactive_comboBox.Name = "departing_inactive_comboBox";
+            this.departing_inactive_comboBox.Size = new System.Drawing.Size(130, 20);
+            this.departing_inactive_comboBox.TabIndex = 8;
+            // 
+            // arriving_inactive_checkbox
+            // 
+            this.arriving_inactive_checkbox.Enabled = false;
+            this.arriving_inactive_checkbox.Location = new System.Drawing.Point(107, 173);
+            this.arriving_inactive_checkbox.Name = "arriving_inactive_checkbox";
+            this.arriving_inactive_checkbox.Size = new System.Drawing.Size(130, 20);
+            this.arriving_inactive_checkbox.TabIndex = 7;
+            // 
+            // time_inactive_checkBox
+            // 
+            this.time_inactive_checkBox.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.cyanairScheduleBindingSource, "Time", true));
+            this.time_inactive_checkBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cyanairScheduleBindingSource, "Time", true));
+            this.time_inactive_checkBox.Enabled = false;
+            this.time_inactive_checkBox.Location = new System.Drawing.Point(107, 259);
+            this.time_inactive_checkBox.Name = "time_inactive_checkBox";
+            this.time_inactive_checkBox.Size = new System.Drawing.Size(130, 20);
+            this.time_inactive_checkBox.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 126);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Departing:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(107, 83);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(130, 20);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 86);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Last name:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 45);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "First name:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(107, 42);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(131, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // cyanairAirportsTableAdapter
+            // 
+            this.cyanairAirportsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CyanairAirportsTableAdapter = this.cyanairAirportsTableAdapter;
+            this.tableAdapterManager.CyanairReservationTableAdapter = null;
+            this.tableAdapterManager.CyanairScheduleTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Cyanair20012020.cyanairDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // cyanairDataSet1
+            // 
+            this.cyanairDataSet1.DataSetName = "cyanairDataSet";
+            this.cyanairDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.CyanairAirportsTableAdapter = null;
+            this.tableAdapterManager1.CyanairReservationTableAdapter = null;
+            this.tableAdapterManager1.CyanairScheduleTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = Cyanair20012020.cyanairDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // cyanairScheduleTableAdapter
             // 
             this.cyanairScheduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // flightNoDataGridViewTextBoxColumn
+            // 
+            this.flightNoDataGridViewTextBoxColumn.DataPropertyName = "Flight No";
+            this.flightNoDataGridViewTextBoxColumn.HeaderText = "Flight No";
+            this.flightNoDataGridViewTextBoxColumn.Name = "flightNoDataGridViewTextBoxColumn";
+            // 
+            // departingDataGridViewTextBoxColumn
+            // 
+            this.departingDataGridViewTextBoxColumn.DataPropertyName = "Departing";
+            this.departingDataGridViewTextBoxColumn.HeaderText = "Departing";
+            this.departingDataGridViewTextBoxColumn.Name = "departingDataGridViewTextBoxColumn";
+            // 
+            // arrivingDataGridViewTextBoxColumn
+            // 
+            this.arrivingDataGridViewTextBoxColumn.DataPropertyName = "Arriving";
+            this.arrivingDataGridViewTextBoxColumn.HeaderText = "Arriving";
+            this.arrivingDataGridViewTextBoxColumn.Name = "arrivingDataGridViewTextBoxColumn";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            // 
+            // economyDataGridViewTextBoxColumn
+            // 
+            this.economyDataGridViewTextBoxColumn.DataPropertyName = "Economy";
+            this.economyDataGridViewTextBoxColumn.HeaderText = "Economy";
+            this.economyDataGridViewTextBoxColumn.Name = "economyDataGridViewTextBoxColumn";
+            // 
+            // businessDataGridViewTextBoxColumn
+            // 
+            this.businessDataGridViewTextBoxColumn.DataPropertyName = "Business";
+            this.businessDataGridViewTextBoxColumn.HeaderText = "Business";
+            this.businessDataGridViewTextBoxColumn.Name = "businessDataGridViewTextBoxColumn";
+            // 
+            // firstDataGridViewTextBoxColumn
+            // 
+            this.firstDataGridViewTextBoxColumn.DataPropertyName = "First";
+            this.firstDataGridViewTextBoxColumn.HeaderText = "First";
+            this.firstDataGridViewTextBoxColumn.Name = "firstDataGridViewTextBoxColumn";
+            // 
+            // durationDataGridViewTextBoxColumn
+            // 
+            this.durationDataGridViewTextBoxColumn.DataPropertyName = "Duration";
+            this.durationDataGridViewTextBoxColumn.HeaderText = "Duration";
+            this.durationDataGridViewTextBoxColumn.Name = "durationDataGridViewTextBoxColumn";
             // 
             // search_flights
             // 
@@ -690,21 +768,21 @@
             this.Name = "search_flights";
             this.Text = "search_flights";
             this.Load += new System.EventHandler(this.search_flights_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingNavigator)).EndInit();
             this.cyanairAirportsBindingNavigator.ResumeLayout(false);
             this.cyanairAirportsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passengers_no)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.filtered_flights)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cyanairScheduleBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cyanairScheduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -756,10 +834,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox departing_inactive_checkbox;
+        private System.Windows.Forms.TextBox departing_inactive_comboBox;
         private System.Windows.Forms.TextBox arriving_inactive_checkbox;
-        private System.Windows.Forms.TextBox date_inactive_checkbox;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox time_inactive_checkBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
@@ -773,5 +850,15 @@
         private System.Windows.Forms.ComboBox flight_no_comboBox;
         private System.Windows.Forms.BindingSource cyanairScheduleBindingSource;
         private cyanairDataSetTableAdapters.CyanairScheduleTableAdapter cyanairScheduleTableAdapter;
+        private System.Windows.Forms.TextBox flight_date_textBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn flightNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn departingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn arrivingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn economyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn businessDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn;
     }
 }

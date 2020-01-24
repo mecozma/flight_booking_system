@@ -61,7 +61,7 @@ namespace Cyanair20012020
             {
                 using (OleDbConnection conn = new OleDbConnection(strCon))
                 {
-                    conn.Open();
+                    
                     string strSql = "SELECT * FROM CyanairAirports";
                     OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
                     DataSet ds = new DataSet();
@@ -70,6 +70,8 @@ namespace Cyanair20012020
                     from_airport_comboBox.DataSource = ds.Tables[0];
                     from_airport_comboBox.DisplayMember = "Descriptions";
                     from_airport_comboBox.ValueMember = "Airport Codes";
+
+                    conn.Close();
                                                           
                 }
             }
@@ -121,6 +123,7 @@ namespace Cyanair20012020
                     to_airport_comboBox.DisplayMember = "Descriptions";
                     to_airport_comboBox.ValueMember = "Airport Codes";
 
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -155,9 +158,9 @@ namespace Cyanair20012020
 
         //Variable used in the ticket booking section
             //assign values to the departure and arriving disabled textboxes
-            departing_inactive_checkbox.Text = from_airport_comboBox.Text;
+            departing_inactive_comboBox.Text = from_airport_comboBox.Text;
             arriving_inactive_checkbox.Text = to_airport_comboBox.Text;
-            date_inactive_checkbox.Text = flight_dates;
+            //date_inactive_checkbox.Text = flight_dates;
            
             //test booking reference
             String reference_number = generate_booking_reference_number("Robocop");
@@ -174,9 +177,9 @@ namespace Cyanair20012020
                     using (OleDbConnection conn = new OleDbConnection(strCon))
                     {
                         conn.Open();
-                        string strSql = "SELECT * FROM CyanairSchedule WHERE  Date LIKE '%" + 
-                            flight_dates + "%' AND Departing LIKE '%" + departure_airport + 
-                            "%' AND Arriving LIKE '%" + arrival_airport + 
+                        string strSql = "SELECT * FROM CyanairSchedule WHERE  Date LIKE '%" +
+                            flight_dates + "%' AND Departing LIKE '%" + departure_airport +
+                            "%' AND Arriving LIKE '%" + arrival_airport +
                             "%' ORDER BY Time DESC;";
                         OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
                         
@@ -186,13 +189,19 @@ namespace Cyanair20012020
                         DataTable filteredData = new DataTable();
                         //The filteredData table is filled with the data processed by the myAdapter
                         adapter.Fill(filteredData);
-                        //The dataGridView added to the frmSearch form is populated with data
+                        //The dataGridView added to the search_flights form is populated with data
                         filtered_flights.DataSource = filteredData;
 
-                        //Asign flightnumber to the flight ckeckbox in order to create the ticket
+                        //Assign flightnumber to the flight ckeckbox in order to create the ticket
                        flight_no_comboBox.DataSource = filteredData;
                        flight_no_comboBox.DisplayMember = "Flight No";
                        flight_no_comboBox.ValueMember = "Flight No";
+
+                     
+
+
+                       //time_inactive_checkBox.Text = filteredData.
+                       //time_inactive_checkBox.Text = "Time";
 
                         //Loop through table to find the selected flight
                        sorted_flights_no = filteredData;
@@ -217,14 +226,28 @@ namespace Cyanair20012020
             }
         }
 
-        private void flight_no_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+       private void flight_no_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (DataRow row in sorted_flights_no.Rows)
+            //String flight_time = "";
+            String flight_date = "";
+            //time_inactive_checkBox.Text = flight_time;
+           // date_inactive_checkbox.Text = flight_date;
+           foreach (DataRow row in sorted_flights_no.Rows)
             {
-                Console.WriteLine(flight_no_comboBox.DisplayMember == row["Flight no"].ToString());
-                Console.WriteLine(row["Time"].ToString());
+                time_inactive_checkBox.Text = row["Time"].ToString().Substring(10);
+
+                //flight_date = row["Date"];
+               // Console.WriteLine(flight_no_comboBox.DisplayMember == row["Flight no"].ToString());
+                Console.WriteLine(row["Time"].ToString().Substring(10));
+                Console.WriteLine("222 " + flight_date);
                 break;
             }
+           
         }
+
+       private void filtered_flights_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       {
+
+       } 
     }
 }
