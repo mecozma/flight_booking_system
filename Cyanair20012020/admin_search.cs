@@ -30,13 +30,7 @@ namespace Cyanair20012020
 
         }
 
-        private void cyanairScheduleBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.cyanairScheduleBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.cyanairDataSet);
-
-        }
+       
 
         private void admin_search_Load(object sender, EventArgs e)
         {
@@ -53,22 +47,35 @@ namespace Cyanair20012020
             String queryString;
             connection = new OleDbConnection(connectionString);
             connection.Open();
-            if (reference_no_textBox_value != "")
+
+            try
             {
-                queryString = "SELECT * FROM CyabairReservation WHERE `Booking reference` LIKE '%" + reference_no_textBox_value + "%';";
-                connection = new OleDbConnection(connectionString);
-                OleDbDataAdapter myAdapter;
-                myAdapter = new OleDbDataAdapter(queryString, connection);
-                DataTable filteredData = new DataTable();
-                myAdapter.Fill(filteredData);
-                dataGridView1.DataSource = filteredData;
-                connection.Close();
-                MessageBox.Show("works");
+
+                if (reference_no_textBox_value != "")
+                {
+                    queryString = "SELECT * FROM CyanairReservation WHERE `Booking reference` LIKE '%" + reference_no_textBox_value + "%';";
+                    connection = new OleDbConnection(connectionString);
+                    OleDbDataAdapter myAdapter;
+                    myAdapter = new OleDbDataAdapter(queryString, connection);
+                    DataTable filteredData = new DataTable();
+                    myAdapter.Fill(filteredData);
+                    dataGridView1.DataSource = filteredData;
+                    connection.Close();
+                    MessageBox.Show("works");
+                }
+                else
+                {
+                    MessageBox.Show("Oops! No reference number typed in!");
+                }
+
+
             }
-            else
+            catch (System.Exception exceptionName)
             {
-                MessageBox.Show("Oops! No reference number typed in!");
+                MessageBox.Show("Search failed with the following error \n:" + exceptionName);
             }
+
+           
 
         }
 

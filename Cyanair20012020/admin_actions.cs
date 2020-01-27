@@ -34,6 +34,7 @@ namespace Cyanair20012020
 
         }
 
+        //Show the admin search form
         private void btn_search_flight_Click(object sender, EventArgs e)
         {
             admin_search.Show();
@@ -73,12 +74,6 @@ namespace Cyanair20012020
         private void btn_logout_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-       
-
-        
-
-        
+        }        
     }
 }

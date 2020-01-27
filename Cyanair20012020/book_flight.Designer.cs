@@ -238,7 +238,7 @@
             this.cyanairReservationBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.cyanairReservationBindingNavigator.Name = "cyanairReservationBindingNavigator";
             this.cyanairReservationBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.cyanairReservationBindingNavigator.Size = new System.Drawing.Size(779, 25);
+            this.cyanairReservationBindingNavigator.Size = new System.Drawing.Size(1070, 25);
             this.cyanairReservationBindingNavigator.TabIndex = 0;
             this.cyanairReservationBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -352,9 +352,9 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.cyanairReservationDataGridView.DataSource = this.cyanairReservationBindingSource;
-            this.cyanairReservationDataGridView.Location = new System.Drawing.Point(60, 537);
+            this.cyanairReservationDataGridView.Location = new System.Drawing.Point(12, 507);
             this.cyanairReservationDataGridView.Name = "cyanairReservationDataGridView";
-            this.cyanairReservationDataGridView.Size = new System.Drawing.Size(707, 220);
+            this.cyanairReservationDataGridView.Size = new System.Drawing.Size(1042, 220);
             this.cyanairReservationDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -563,7 +563,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 739);
+            this.ClientSize = new System.Drawing.Size(1070, 739);
             this.Controls.Add(this.close_form);
             this.Controls.Add(this.generate_ticket_button);
             this.Controls.Add(this.first_class_radioButton);

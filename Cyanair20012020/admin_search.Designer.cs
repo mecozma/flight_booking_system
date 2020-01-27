@@ -52,17 +52,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.cyanairScheduleBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.cyanairReservationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cyanairReservationDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reference_no_textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -71,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cyanairScheduleBindingNavigator)).BeginInit();
             this.cyanairScheduleBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairReservationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cyanairReservationDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -252,93 +240,11 @@
             this.cyanairScheduleBindingNavigatorSaveItem.Name = "cyanairScheduleBindingNavigatorSaveItem";
             this.cyanairScheduleBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.cyanairScheduleBindingNavigatorSaveItem.Text = "Save Data";
-            this.cyanairScheduleBindingNavigatorSaveItem.Click += new System.EventHandler(this.cyanairScheduleBindingNavigatorSaveItem_Click_1);
             // 
             // cyanairReservationBindingSource
             // 
             this.cyanairReservationBindingSource.DataMember = "CyanairReservation";
             this.cyanairReservationBindingSource.DataSource = this.cyanairDataSet;
-            // 
-            // cyanairReservationDataGridView
-            // 
-            this.cyanairReservationDataGridView.AutoGenerateColumns = false;
-            this.cyanairReservationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cyanairReservationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.cyanairReservationDataGridView.DataSource = this.cyanairReservationBindingSource;
-            this.cyanairReservationDataGridView.Location = new System.Drawing.Point(0, 380);
-            this.cyanairReservationDataGridView.Name = "cyanairReservationDataGridView";
-            this.cyanairReservationDataGridView.Size = new System.Drawing.Size(1041, 220);
-            this.cyanairReservationDataGridView.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Flight No";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Flight No";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Departing";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Departing";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Arriving";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Arriving";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Date";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Time";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Seat Class";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Seat Class";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Passenger Full Name";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Passenger Full Name";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Passport No";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Passport No";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Booking reference";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Booking reference";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Email";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // reference_no_textBox
             // 
@@ -372,7 +278,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.reference_no_textBox);
-            this.Controls.Add(this.cyanairReservationDataGridView);
             this.Controls.Add(this.cyanairScheduleBindingNavigator);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_search);
@@ -386,7 +291,6 @@
             this.cyanairScheduleBindingNavigator.ResumeLayout(false);
             this.cyanairScheduleBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairReservationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cyanairReservationDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -417,17 +321,6 @@
         private System.Windows.Forms.ToolStripButton cyanairScheduleBindingNavigatorSaveItem;
         private cyanairDataSetTableAdapters.CyanairReservationTableAdapter cyanairReservationTableAdapter;
         private System.Windows.Forms.BindingSource cyanairReservationBindingSource;
-        private System.Windows.Forms.DataGridView cyanairReservationDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.TextBox reference_no_textBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
