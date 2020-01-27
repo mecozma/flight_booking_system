@@ -524,7 +524,7 @@
             // 
             // admin_actions_time
             // 
-            this.admin_actions_time.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cyanairScheduleBindingSource, "Time", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "t"));
+            this.admin_actions_time.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cyanairScheduleBindingSource, "Time", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "G"));
             this.admin_actions_time.Location = new System.Drawing.Point(211, 142);
             this.admin_actions_time.Name = "admin_actions_time";
             this.admin_actions_time.Size = new System.Drawing.Size(200, 20);

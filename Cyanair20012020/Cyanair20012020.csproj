@@ -56,11 +56,11 @@
     <Compile Include="admin_search.Designer.cs">
       <DependentUpon>admin_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="book_flights.cs">
+    <Compile Include="book_flight.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="book_flights.Designer.cs">
-      <DependentUpon>book_flights.cs</DependentUpon>
+    <Compile Include="book_flight.Designer.cs">
+      <DependentUpon>book_flight.cs</DependentUpon>
     </Compile>
     <Compile Include="cyanairDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -92,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin_search.resx">
       <DependentUpon>admin_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="book_flight.resx">
+      <DependentUpon>book_flight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="firstView.resx">
       <DependentUpon>firstView.cs</DependentUpon>
