@@ -27,7 +27,7 @@ namespace Cyanair20012020
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-        /*    int count = 0;
+            int count = 0;
             String username = "admin";
             String password = "admin";
             String username_value;
@@ -42,11 +42,10 @@ namespace Cyanair20012020
             {
                 Cursor.Current = Cursors.WaitCursor;
                 this.Close();
-                MessageBox.Show("Success!");
+                MessageBox.Show("Hello Admin user. You are authenticated and able to access your account");
                 admin_actions.Show();
-            } */
-            //to be deleted when enable the user and password
-            admin_actions.Show();
+            } 
+           
         }
     }
 }

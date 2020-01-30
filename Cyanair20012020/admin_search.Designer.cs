@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_search));
-            this.label1 = new System.Windows.Forms.Label();
+            this.admin_search_label = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.cyanairDataSet = new Cyanair20012020.cyanairDataSet();
@@ -63,33 +63,47 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // admin_search_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(220, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Reservations lookup";
+            this.admin_search_label.AutoSize = true;
+            this.admin_search_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_search_label.Location = new System.Drawing.Point(220, 58);
+            this.admin_search_label.Name = "admin_search_label";
+            this.admin_search_label.Size = new System.Drawing.Size(232, 29);
+            this.admin_search_label.TabIndex = 0;
+            this.admin_search_label.Text = "Reservations lookup";
             // 
             // btn_search
             // 
+            this.btn_search.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_search.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_search.FlatAppearance.BorderSize = 2;
+            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.Location = new System.Drawing.Point(534, 134);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.Size = new System.Drawing.Size(103, 39);
             this.btn_search.TabIndex = 2;
             this.btn_search.Text = "Search";
-            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.UseVisualStyleBackColor = false;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // btn_close
             // 
+            this.btn_close.BackColor = System.Drawing.Color.OrangeRed;
+            this.btn_close.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_close.FlatAppearance.BorderSize = 2;
+            this.btn_close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_close.ForeColor = System.Drawing.Color.White;
             this.btn_close.Location = new System.Drawing.Point(534, 209);
             this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(75, 23);
+            this.btn_close.Size = new System.Drawing.Size(103, 39);
             this.btn_close.TabIndex = 3;
             this.btn_close.Text = "Close";
-            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.UseVisualStyleBackColor = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // cyanairDataSet
@@ -144,7 +158,7 @@
             this.cyanairScheduleBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.cyanairScheduleBindingNavigator.Name = "cyanairScheduleBindingNavigator";
             this.cyanairScheduleBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.cyanairScheduleBindingNavigator.Size = new System.Drawing.Size(1061, 25);
+            this.cyanairScheduleBindingNavigator.Size = new System.Drawing.Size(965, 25);
             this.cyanairScheduleBindingNavigator.TabIndex = 5;
             this.cyanairScheduleBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -256,9 +270,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(80, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.Size = new System.Drawing.Size(119, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Reference number";
             // 
@@ -274,14 +289,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 655);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(965, 525);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.reference_no_textBox);
             this.Controls.Add(this.cyanairScheduleBindingNavigator);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.admin_search_label);
             this.Name = "admin_search";
             this.Text = "admin_search";
             this.Load += new System.EventHandler(this.admin_search_Load);
@@ -299,7 +315,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label admin_search_label;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_close;
         private cyanairDataSet cyanairDataSet;

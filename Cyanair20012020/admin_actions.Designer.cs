@@ -100,81 +100,90 @@
             // flight_NoLabel
             // 
             flight_NoLabel.AutoSize = true;
+            flight_NoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             flight_NoLabel.Location = new System.Drawing.Point(149, 40);
             flight_NoLabel.Name = "flight_NoLabel";
-            flight_NoLabel.Size = new System.Drawing.Size(52, 13);
+            flight_NoLabel.Size = new System.Drawing.Size(64, 16);
             flight_NoLabel.TabIndex = 2;
             flight_NoLabel.Text = "Flight No:";
             // 
             // departingLabel
             // 
             departingLabel.AutoSize = true;
+            departingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             departingLabel.Location = new System.Drawing.Point(149, 66);
             departingLabel.Name = "departingLabel";
-            departingLabel.Size = new System.Drawing.Size(56, 13);
+            departingLabel.Size = new System.Drawing.Size(70, 16);
             departingLabel.TabIndex = 4;
             departingLabel.Text = "Departing:";
             // 
             // arrivingLabel
             // 
             arrivingLabel.AutoSize = true;
+            arrivingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             arrivingLabel.Location = new System.Drawing.Point(149, 92);
             arrivingLabel.Name = "arrivingLabel";
-            arrivingLabel.Size = new System.Drawing.Size(45, 13);
+            arrivingLabel.Size = new System.Drawing.Size(56, 16);
             arrivingLabel.TabIndex = 6;
             arrivingLabel.Text = "Arriving:";
             // 
             // dateLabel
             // 
             dateLabel.AutoSize = true;
+            dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dateLabel.Location = new System.Drawing.Point(149, 119);
             dateLabel.Name = "dateLabel";
-            dateLabel.Size = new System.Drawing.Size(33, 13);
+            dateLabel.Size = new System.Drawing.Size(40, 16);
             dateLabel.TabIndex = 8;
             dateLabel.Text = "Date:";
             // 
             // timeLabel
             // 
             timeLabel.AutoSize = true;
+            timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             timeLabel.Location = new System.Drawing.Point(149, 145);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new System.Drawing.Size(33, 13);
+            timeLabel.Size = new System.Drawing.Size(42, 16);
             timeLabel.TabIndex = 10;
             timeLabel.Text = "Time:";
             // 
             // economyLabel
             // 
             economyLabel.AutoSize = true;
+            economyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             economyLabel.Location = new System.Drawing.Point(149, 170);
             economyLabel.Name = "economyLabel";
-            economyLabel.Size = new System.Drawing.Size(54, 13);
+            economyLabel.Size = new System.Drawing.Size(68, 16);
             economyLabel.TabIndex = 12;
             economyLabel.Text = "Economy:";
             // 
             // businessLabel
             // 
             businessLabel.AutoSize = true;
+            businessLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             businessLabel.Location = new System.Drawing.Point(149, 196);
             businessLabel.Name = "businessLabel";
-            businessLabel.Size = new System.Drawing.Size(52, 13);
+            businessLabel.Size = new System.Drawing.Size(66, 16);
             businessLabel.TabIndex = 14;
             businessLabel.Text = "Business:";
             // 
             // firstLabel
             // 
             firstLabel.AutoSize = true;
+            firstLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             firstLabel.Location = new System.Drawing.Point(149, 222);
             firstLabel.Name = "firstLabel";
-            firstLabel.Size = new System.Drawing.Size(29, 13);
+            firstLabel.Size = new System.Drawing.Size(36, 16);
             firstLabel.TabIndex = 16;
             firstLabel.Text = "First:";
             // 
             // durationLabel
             // 
             durationLabel.AutoSize = true;
+            durationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             durationLabel.Location = new System.Drawing.Point(149, 248);
             durationLabel.Name = "durationLabel";
-            durationLabel.Size = new System.Drawing.Size(50, 13);
+            durationLabel.Size = new System.Drawing.Size(61, 16);
             durationLabel.TabIndex = 18;
             durationLabel.Text = "Duration:";
             // 
@@ -339,7 +348,7 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.cyanairScheduleDataGridView.DataSource = this.cyanairScheduleBindingSource;
-            this.cyanairScheduleDataGridView.Location = new System.Drawing.Point(0, 285);
+            this.cyanairScheduleDataGridView.Location = new System.Drawing.Point(8, 293);
             this.cyanairScheduleDataGridView.Name = "cyanairScheduleDataGridView";
             this.cyanairScheduleDataGridView.Size = new System.Drawing.Size(945, 220);
             this.cyanairScheduleDataGridView.TabIndex = 1;
@@ -464,9 +473,14 @@
             // 
             // btn_update_flight
             // 
+            this.btn_update_flight.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_update_flight.FlatAppearance.BorderSize = 2;
+            this.btn_update_flight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_update_flight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_update_flight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update_flight.Location = new System.Drawing.Point(499, 40);
             this.btn_update_flight.Name = "btn_update_flight";
-            this.btn_update_flight.Size = new System.Drawing.Size(75, 23);
+            this.btn_update_flight.Size = new System.Drawing.Size(103, 39);
             this.btn_update_flight.TabIndex = 20;
             this.btn_update_flight.Text = "Update flight";
             this.btn_update_flight.UseVisualStyleBackColor = true;
@@ -474,9 +488,14 @@
             // 
             // btn_add_flight
             // 
+            this.btn_add_flight.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_add_flight.FlatAppearance.BorderSize = 2;
+            this.btn_add_flight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_add_flight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_add_flight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add_flight.Location = new System.Drawing.Point(499, 81);
             this.btn_add_flight.Name = "btn_add_flight";
-            this.btn_add_flight.Size = new System.Drawing.Size(75, 23);
+            this.btn_add_flight.Size = new System.Drawing.Size(103, 39);
             this.btn_add_flight.TabIndex = 21;
             this.btn_add_flight.Text = "Add flight";
             this.btn_add_flight.UseVisualStyleBackColor = true;
@@ -484,9 +503,12 @@
             // 
             // btn_delete_flight
             // 
-            this.btn_delete_flight.Location = new System.Drawing.Point(499, 119);
+            this.btn_delete_flight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_delete_flight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_delete_flight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete_flight.Location = new System.Drawing.Point(499, 123);
             this.btn_delete_flight.Name = "btn_delete_flight";
-            this.btn_delete_flight.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete_flight.Size = new System.Drawing.Size(103, 39);
             this.btn_delete_flight.TabIndex = 22;
             this.btn_delete_flight.Text = "Delete flight";
             this.btn_delete_flight.UseVisualStyleBackColor = true;
@@ -494,9 +516,14 @@
             // 
             // btn_search_flight
             // 
-            this.btn_search_flight.Location = new System.Drawing.Point(499, 149);
+            this.btn_search_flight.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_search_flight.FlatAppearance.BorderSize = 2;
+            this.btn_search_flight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_search_flight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_search_flight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search_flight.Location = new System.Drawing.Point(499, 165);
             this.btn_search_flight.Name = "btn_search_flight";
-            this.btn_search_flight.Size = new System.Drawing.Size(75, 23);
+            this.btn_search_flight.Size = new System.Drawing.Size(103, 39);
             this.btn_search_flight.TabIndex = 23;
             this.btn_search_flight.Text = "Search flight";
             this.btn_search_flight.UseVisualStyleBackColor = true;
@@ -504,22 +531,30 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(499, 185);
+            this.btn_cancel.BackColor = System.Drawing.Color.OrangeRed;
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.Location = new System.Drawing.Point(499, 206);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_cancel.Size = new System.Drawing.Size(103, 39);
             this.btn_cancel.TabIndex = 24;
             this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.UseVisualStyleBackColor = false;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(499, 222);
+            this.btn_logout.BackColor = System.Drawing.Color.OrangeRed;
+            this.btn_logout.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_logout.FlatAppearance.BorderSize = 2;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.Location = new System.Drawing.Point(499, 247);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(75, 23);
+            this.btn_logout.Size = new System.Drawing.Size(103, 39);
             this.btn_logout.TabIndex = 25;
             this.btn_logout.Text = "Logout";
-            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.UseVisualStyleBackColor = false;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // admin_actions_time
@@ -534,6 +569,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(965, 525);
             this.Controls.Add(this.admin_actions_time);
             this.Controls.Add(this.btn_logout);
