@@ -21,17 +21,19 @@ namespace Cyanair20012020
             InitializeComponent();
         }
 
+        //admin user button event listener
         private void adminUser_Click(object sender, EventArgs e)
         {
             //on click show the login form
             loginForm.Show();
-            //on click close the curent form
-            //this.Hide();
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void book_flights_button_Click(object sender, EventArgs e)
         {
             search_flights.Show();
         }
+
+       
     }
 }

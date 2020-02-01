@@ -37,10 +37,11 @@
             // company_motto
             // 
             this.company_motto.AutoSize = true;
-            this.company_motto.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.company_motto.Location = new System.Drawing.Point(263, 231);
+            this.company_motto.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.company_motto.Location = new System.Drawing.Point(284, 330);
+            this.company_motto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.company_motto.Name = "company_motto";
-            this.company_motto.Size = new System.Drawing.Size(429, 21);
+            this.company_motto.Size = new System.Drawing.Size(844, 41);
             this.company_motto.TabIndex = 0;
             this.company_motto.Text = "Is Cyanair the best company to fly with? You bet it is!";
             // 
@@ -52,13 +53,14 @@
             this.book_flights_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.book_flights_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.book_flights_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.book_flights_button.Location = new System.Drawing.Point(324, 391);
+            this.book_flights_button.Location = new System.Drawing.Point(486, 602);
+            this.book_flights_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.book_flights_button.Name = "book_flights_button";
-            this.book_flights_button.Size = new System.Drawing.Size(103, 39);
+            this.book_flights_button.Size = new System.Drawing.Size(154, 60);
             this.book_flights_button.TabIndex = 1;
             this.book_flights_button.Text = "Book flights";
             this.book_flights_button.UseVisualStyleBackColor = false;
-            this.book_flights_button.Click += new System.EventHandler(this.button1_Click);
+            this.book_flights_button.Click += new System.EventHandler(this.book_flights_button_Click);
             // 
             // adminUser
             // 
@@ -68,9 +70,10 @@
             this.adminUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.adminUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.adminUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.adminUser.Location = new System.Drawing.Point(507, 391);
+            this.adminUser.Location = new System.Drawing.Point(760, 602);
+            this.adminUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.adminUser.Name = "adminUser";
-            this.adminUser.Size = new System.Drawing.Size(103, 39);
+            this.adminUser.Size = new System.Drawing.Size(154, 60);
             this.adminUser.TabIndex = 2;
             this.adminUser.Text = "Admin user";
             this.adminUser.UseVisualStyleBackColor = false;
@@ -80,7 +83,8 @@
             // 
             this.logo_label.AutoSize = true;
             this.logo_label.Font = new System.Drawing.Font("Monotype Corsiva", 42F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.logo_label.Location = new System.Drawing.Point(12, 9);
+            this.logo_label.Location = new System.Drawing.Point(18, 14);
+            this.logo_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.logo_label.Name = "logo_label";
             this.logo_label.Size = new System.Drawing.Size(147, 51);
             this.logo_label.TabIndex = 3;
@@ -88,14 +92,15 @@
             // 
             // firstView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(965, 525);
+            this.ClientSize = new System.Drawing.Size(1448, 808);
             this.Controls.Add(this.logo_label);
             this.Controls.Add(this.adminUser);
             this.Controls.Add(this.book_flights_button);
             this.Controls.Add(this.company_motto);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "firstView";
             this.Text = "Welcome view";
             this.ResumeLayout(false);
