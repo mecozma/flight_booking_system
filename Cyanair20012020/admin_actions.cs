@@ -13,18 +13,12 @@ namespace Cyanair20012020
 {
     public partial class admin_actions : Form
     {
+        //Declare and instantiate a new admin_search form
         Form admin_search = new admin_search();
+
         public admin_actions()
         {
             InitializeComponent();
-        }
-
-        private void cyanairScheduleBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.cyanairScheduleBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.cyanairDataSet);
-
         }
 
         private void admin_actions_Load(object sender, EventArgs e)
@@ -55,22 +49,26 @@ namespace Cyanair20012020
                 MessageBox.Show("Flight update failed with the following error: " + exceptionName);
             }
         }
-
+        
+        //Add flight method
         private void btn_add_flight_Click(object sender, EventArgs e)
         {
             cyanairScheduleBindingSource.AddNew();
         }
 
+        //Delete flight method
         private void btn_delete_flight_Click(object sender, EventArgs e)
         {
             cyanairScheduleBindingSource.RemoveCurrent();
         }
 
+        //Cancel changes method
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             cyanairScheduleTableAdapter.Fill(cyanairDataSet.CyanairSchedule);
         }
 
+        //Close the form
         private void btn_logout_Click(object sender, EventArgs e)
         {
             this.Hide();

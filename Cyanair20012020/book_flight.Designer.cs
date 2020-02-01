@@ -84,7 +84,9 @@
             this.generate_ticket_button = new System.Windows.Forms.Button();
             this.close_form = new System.Windows.Forms.Button();
             this.ticket_details = new System.Windows.Forms.GroupBox();
+            this.book_different_flight = new System.Windows.Forms.Button();
             this.return_flight_button = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             flight_NoLabel = new System.Windows.Forms.Label();
             departingLabel = new System.Windows.Forms.Label();
             arrivingLabel = new System.Windows.Forms.Label();
@@ -513,6 +515,7 @@
             this.passenger_Full_NameTextBox.Name = "passenger_Full_NameTextBox";
             this.passenger_Full_NameTextBox.Size = new System.Drawing.Size(148, 35);
             this.passenger_Full_NameTextBox.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.passenger_Full_NameTextBox, "Type in the passenger\'s full name");
             // 
             // passport_NoTextBox
             // 
@@ -522,6 +525,7 @@
             this.passport_NoTextBox.Name = "passport_NoTextBox";
             this.passport_NoTextBox.Size = new System.Drawing.Size(148, 35);
             this.passport_NoTextBox.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.passport_NoTextBox, "Type in the passenger\'s passport number");
             // 
             // booking_referenceTextBox
             // 
@@ -541,19 +545,19 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(148, 35);
             this.emailTextBox.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.emailTextBox, "Type in the passenger\'s email");
             // 
             // economy_radioButton
             // 
             this.economy_radioButton.AutoSize = true;
-            this.economy_radioButton.Checked = true;
             this.economy_radioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.economy_radioButton.Location = new System.Drawing.Point(321, 361);
             this.economy_radioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.economy_radioButton.Name = "economy_radioButton";
             this.economy_radioButton.Size = new System.Drawing.Size(138, 33);
             this.economy_radioButton.TabIndex = 22;
-            this.economy_radioButton.TabStop = true;
             this.economy_radioButton.Text = "Economy";
+            this.toolTip1.SetToolTip(this.economy_radioButton, "Economy class");
             this.economy_radioButton.UseVisualStyleBackColor = true;
             this.economy_radioButton.CheckedChanged += new System.EventHandler(this.economy_radioButton_CheckedChanged);
             // 
@@ -567,6 +571,7 @@
             this.business_radioButton.Size = new System.Drawing.Size(136, 33);
             this.business_radioButton.TabIndex = 23;
             this.business_radioButton.Text = "Business";
+            this.toolTip1.SetToolTip(this.business_radioButton, "Business class");
             this.business_radioButton.UseVisualStyleBackColor = true;
             this.business_radioButton.CheckedChanged += new System.EventHandler(this.business_radioButton_CheckedChanged);
             // 
@@ -580,6 +585,7 @@
             this.first_class_radioButton.Size = new System.Drawing.Size(85, 33);
             this.first_class_radioButton.TabIndex = 24;
             this.first_class_radioButton.Text = "First";
+            this.toolTip1.SetToolTip(this.first_class_radioButton, "First class");
             this.first_class_radioButton.UseVisualStyleBackColor = true;
             this.first_class_radioButton.CheckedChanged += new System.EventHandler(this.first_class_radioButton_CheckedChanged);
             // 
@@ -596,6 +602,7 @@
             this.generate_ticket_button.Size = new System.Drawing.Size(199, 60);
             this.generate_ticket_button.TabIndex = 25;
             this.generate_ticket_button.Text = "Generate ticket";
+            this.toolTip1.SetToolTip(this.generate_ticket_button, "Reserve the specific flight and save it to the bookings database");
             this.generate_ticket_button.UseVisualStyleBackColor = false;
             this.generate_ticket_button.Click += new System.EventHandler(this.generate_ticket_button_Click);
             // 
@@ -607,17 +614,18 @@
             this.close_form.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.close_form.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.close_form.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.close_form.Location = new System.Drawing.Point(966, 196);
+            this.close_form.Location = new System.Drawing.Point(966, 271);
             this.close_form.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.close_form.Name = "close_form";
             this.close_form.Size = new System.Drawing.Size(199, 60);
-            this.close_form.TabIndex = 26;
+            this.close_form.TabIndex = 28;
             this.close_form.Text = "Close";
             this.close_form.UseVisualStyleBackColor = false;
             this.close_form.Click += new System.EventHandler(this.close_form_Click);
             // 
             // ticket_details
             // 
+            this.ticket_details.Controls.Add(this.book_different_flight);
             this.ticket_details.Controls.Add(this.return_flight_button);
             this.ticket_details.Controls.Add(this.close_form);
             this.ticket_details.Controls.Add(this.generate_ticket_button);
@@ -637,6 +645,24 @@
             this.ticket_details.TabStop = false;
             this.ticket_details.Text = "Ticket details";
             // 
+            // book_different_flight
+            // 
+            this.book_different_flight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(128)))), ((int)(((byte)(66)))));
+            this.book_different_flight.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.book_different_flight.FlatAppearance.BorderSize = 2;
+            this.book_different_flight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.book_different_flight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.book_different_flight.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.book_different_flight.Location = new System.Drawing.Point(966, 192);
+            this.book_different_flight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.book_different_flight.Name = "book_different_flight";
+            this.book_different_flight.Size = new System.Drawing.Size(199, 60);
+            this.book_different_flight.TabIndex = 27;
+            this.book_different_flight.Text = "Book another";
+            this.toolTip1.SetToolTip(this.book_different_flight, "Book a return flight");
+            this.book_different_flight.UseVisualStyleBackColor = false;
+            this.book_different_flight.Click += new System.EventHandler(this.book_different_flight_Click);
+            // 
             // return_flight_button
             // 
             this.return_flight_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(128)))), ((int)(((byte)(66)))));
@@ -651,8 +677,9 @@
             this.return_flight_button.Size = new System.Drawing.Size(199, 60);
             this.return_flight_button.TabIndex = 26;
             this.return_flight_button.Text = "Book return";
+            this.toolTip1.SetToolTip(this.return_flight_button, "Book a return flight");
             this.return_flight_button.UseVisualStyleBackColor = false;
-            this.return_flight_button.Click += new System.EventHandler(this.close_form_Click);
+            this.return_flight_button.Click += new System.EventHandler(this.return_flight_button_Click);
             // 
             // book_flight
             // 
@@ -679,7 +706,9 @@
             this.Controls.Add(this.cyanairReservationBindingNavigator);
             this.Controls.Add(this.ticket_details);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "book_flight";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "book_flight";
             this.Load += new System.EventHandler(this.book_flight_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet)).EndInit();
@@ -742,5 +771,7 @@
         private System.Windows.Forms.Button close_form;
         private System.Windows.Forms.GroupBox ticket_details;
         private System.Windows.Forms.Button return_flight_button;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button book_different_flight;
     }
 }

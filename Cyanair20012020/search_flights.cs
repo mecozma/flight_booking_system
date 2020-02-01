@@ -16,7 +16,7 @@ namespace Cyanair20012020
         //Create a new form
         Form book_flight = new book_flight();
 
-        //Global variable
+        //New datatable instance
         DataTable sorted_flights_no = new DataTable();
 
         //The following global variables will be used to pass the flight data to the book_flight form
@@ -29,10 +29,10 @@ namespace Cyanair20012020
         public static string business_class = "";
         public static string first_class = "";
         public static string flight_duration = "";
-        
 
+        //Variable used to change the description of the selected flight - outbound, inbound and extra flight
+        public static String flight_identifier = "Outbound flight";
 
-      
         public search_flights()
         {
             InitializeComponent();
@@ -56,7 +56,29 @@ namespace Cyanair20012020
             //Calling the methods to load dropdown items in comboboxes
             load_from_airport_comboBox();
             load_to_airport_comboBox();
-            //load_departure_date_comboBox();
+            flight_direction.Text = flight_identifier;
+           
+
+          /*  if (flight_identifier == "Outbound flight" || flight_identifier == "Extra flight")
+            {
+                flight_direction.Text = flight_identifier;
+                //Calling the methods to load dropdown items in comboboxes
+                load_from_airport_comboBox();
+                load_to_airport_comboBox();
+                //load_departure_date_comboBox();
+            }
+
+            if (flight_identifier == "Inbound flight")
+            {
+                from_airport_comboBox.DisplayMember = arriving;
+                from_airport_comboBox.ValueMember = arriving;
+                from_airport_comboBox.Enabled = false;
+                to_airport_comboBox.DisplayMember = departing;
+                to_airport_comboBox.DisplayMember = departing;
+                to_airport_comboBox.Enabled = false;
+            }
+
+           */
         }
 
        
@@ -72,18 +94,19 @@ namespace Cyanair20012020
             {
                 using (OleDbConnection conn = new OleDbConnection(strCon))
                 {
-                    
+                    //sql query string
                     string strSql = "SELECT * FROM CyanairAirports";
+                    //New data adapter
                     OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
+                    //New dataset
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
                     //populate from_airport_combobox
                     from_airport_comboBox.DataSource = ds.Tables[0];
                     from_airport_comboBox.DisplayMember = "Descriptions";
                     from_airport_comboBox.ValueMember = "Airport Codes";
-
-                    conn.Close();
-                                                          
+                    //database connection is closed
+                    conn.Close();                                     
                 }
             }
             catch (Exception ex)
@@ -103,6 +126,7 @@ namespace Cyanair20012020
             {
                 using (OleDbConnection conn = new OleDbConnection(strCon))
                 {
+                    //connection to the database and filling the adapter with the queried data
                     conn.Open();
                     string strSql = "SELECT * FROM CyanairAirports";
                     OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
@@ -111,9 +135,11 @@ namespace Cyanair20012020
                     
                     //populate to_airport_combobox
                     to_airport_comboBox.DataSource = ds;
+                    //The displayed value in the dropbox shows the airport names
                     to_airport_comboBox.DisplayMember = "Descriptions";
+                    //The airport code assigned to each airport
                     to_airport_comboBox.ValueMember = "Airport Codes";
-
+                    //Database connection closed
                     conn.Close();
                 }
             }
@@ -138,10 +164,9 @@ namespace Cyanair20012020
             String departure_airport = from_airport_comboBox.SelectedValue.ToString();
             String arrival_airport = to_airport_comboBox.SelectedValue.ToString();
             String flight_dates = flight_date.Value.ToShortDateString();
-         
-    
 
-            if (departure_airport != arrival_airport) // && flight_date.Value.Date >= DateTime.Today   add this here
+            //condition to check if the departure anr arrival airport are different and if the selected date not in the past
+            if (departure_airport != arrival_airport && flight_date.Value.Date >= DateTime.Today) 
             {
                 AppDomain.CurrentDomain.SetData("DataDirectory", @"\\prod\ServiceRequests");
                 //connection string
@@ -152,6 +177,7 @@ namespace Cyanair20012020
                     using (OleDbConnection conn = new OleDbConnection(strCon))
                     {
                         conn.Open();
+                        //Sql query string
                         string strSql = "SELECT * FROM CyanairSchedule WHERE  Date LIKE '%" +
                             flight_dates + "%' AND Departing LIKE '%" + departure_airport +
                             "%' AND Arriving LIKE '%" + arrival_airport +
@@ -172,7 +198,7 @@ namespace Cyanair20012020
                        flight_no_comboBox.DisplayMember = "Flight No";
                        flight_no_comboBox.ValueMember = "Flight No";
 
-                        /*assigned the value of the filtered data table to the global variable in order to be abl
+                        /*assigned the value of the filtered data table to the global variable in order to be able
                          * to reuse the table globaly
                          */
                        sorted_flights_no = filteredData;
@@ -222,19 +248,35 @@ namespace Cyanair20012020
                     first_class = row["First"].ToString();
                     flight_duration = row["Duration"].ToString();
 
-                    Console.WriteLine("flight to be booked" + date);
                     break;
                 }
             }
 
-            Console.WriteLine("changed: " + selected_flight );
+            //Test if the seat type is available
+            if (economy_class == "0" && business_class == "0" && first_class == "0")
+            {
+                MessageBox.Show("Flight fully booked. Please choose a different flight!");
+            }
             
         }
 
+        //Event listener
         private void open_book_flight_form_Click(object sender, EventArgs e)
         {
-            book_flight.Show();
-        }
+            //Flight fully booked restriction logic
+             if (economy_class == "0" && business_class == "0" && first_class == "0")
+            {
+                MessageBox.Show("Flight fully booked. Please choose a different flight!");
+            } else if (flight_no_comboBox.Text == ""){
+                MessageBox.Show("There is no available flight on this date");
 
+            }
+             else
+             {
+                 book_flight.Show();
+             }
+            
+        }
+      
     }
 }

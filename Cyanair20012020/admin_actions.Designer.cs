@@ -82,6 +82,7 @@
             this.btn_logout = new System.Windows.Forms.Button();
             this.admin_actions_time = new System.Windows.Forms.TextBox();
             this.admin_action = new System.Windows.Forms.GroupBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             flight_NoLabel = new System.Windows.Forms.Label();
             departingLabel = new System.Windows.Forms.Label();
             arrivingLabel = new System.Windows.Forms.Label();
@@ -344,7 +345,7 @@
             this.cyanairScheduleBindingNavigatorSaveItem.Name = "cyanairScheduleBindingNavigatorSaveItem";
             this.cyanairScheduleBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
             this.cyanairScheduleBindingNavigatorSaveItem.Text = "Save Data";
-            this.cyanairScheduleBindingNavigatorSaveItem.Click += new System.EventHandler(this.cyanairScheduleBindingNavigatorSaveItem_Click);
+          
             // 
             // cyanairScheduleDataGridView
             // 
@@ -429,6 +430,8 @@
             this.flight_NoTextBox.Name = "flight_NoTextBox";
             this.flight_NoTextBox.Size = new System.Drawing.Size(298, 35);
             this.flight_NoTextBox.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.flight_NoTextBox, "Flight number");
+        
             // 
             // departingTextBox
             // 
@@ -438,6 +441,7 @@
             this.departingTextBox.Name = "departingTextBox";
             this.departingTextBox.Size = new System.Drawing.Size(298, 35);
             this.departingTextBox.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.departingTextBox, "Departing airport");
             // 
             // arrivingTextBox
             // 
@@ -447,6 +451,7 @@
             this.arrivingTextBox.Name = "arrivingTextBox";
             this.arrivingTextBox.Size = new System.Drawing.Size(298, 35);
             this.arrivingTextBox.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.arrivingTextBox, "Arriving airport");
             // 
             // dateDateTimePicker
             // 
@@ -456,6 +461,7 @@
             this.dateDateTimePicker.Name = "dateDateTimePicker";
             this.dateDateTimePicker.Size = new System.Drawing.Size(298, 35);
             this.dateDateTimePicker.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.dateDateTimePicker, "Flight date");
             // 
             // economyTextBox
             // 
@@ -465,6 +471,7 @@
             this.economyTextBox.Name = "economyTextBox";
             this.economyTextBox.Size = new System.Drawing.Size(298, 35);
             this.economyTextBox.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.economyTextBox, "Economy class");
             // 
             // businessTextBox
             // 
@@ -474,6 +481,7 @@
             this.businessTextBox.Name = "businessTextBox";
             this.businessTextBox.Size = new System.Drawing.Size(298, 35);
             this.businessTextBox.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.businessTextBox, "Business class");
             // 
             // firstTextBox
             // 
@@ -483,6 +491,7 @@
             this.firstTextBox.Name = "firstTextBox";
             this.firstTextBox.Size = new System.Drawing.Size(298, 35);
             this.firstTextBox.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.firstTextBox, "First class");
             // 
             // durationTextBox
             // 
@@ -492,6 +501,7 @@
             this.durationTextBox.Name = "durationTextBox";
             this.durationTextBox.Size = new System.Drawing.Size(298, 35);
             this.durationTextBox.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.durationTextBox, "Flight duration");
             // 
             // btn_update_flight
             // 
@@ -508,6 +518,7 @@
             this.btn_update_flight.Size = new System.Drawing.Size(154, 60);
             this.btn_update_flight.TabIndex = 20;
             this.btn_update_flight.Text = "Update ";
+            this.toolTip1.SetToolTip(this.btn_update_flight, "Update flight");
             this.btn_update_flight.UseVisualStyleBackColor = false;
             this.btn_update_flight.Click += new System.EventHandler(this.btn_update_flight_Click);
             // 
@@ -526,6 +537,7 @@
             this.btn_add_flight.Size = new System.Drawing.Size(154, 60);
             this.btn_add_flight.TabIndex = 21;
             this.btn_add_flight.Text = "Add flight";
+            this.toolTip1.SetToolTip(this.btn_add_flight, "Add new flight");
             this.btn_add_flight.UseVisualStyleBackColor = false;
             this.btn_add_flight.Click += new System.EventHandler(this.btn_add_flight_Click);
             // 
@@ -542,6 +554,7 @@
             this.btn_delete_flight.Size = new System.Drawing.Size(154, 60);
             this.btn_delete_flight.TabIndex = 22;
             this.btn_delete_flight.Text = "Delete flight";
+            this.toolTip1.SetToolTip(this.btn_delete_flight, "Delete the selected flight");
             this.btn_delete_flight.UseVisualStyleBackColor = false;
             this.btn_delete_flight.Click += new System.EventHandler(this.btn_delete_flight_Click);
             // 
@@ -560,6 +573,7 @@
             this.btn_search_flight.Size = new System.Drawing.Size(154, 60);
             this.btn_search_flight.TabIndex = 23;
             this.btn_search_flight.Text = "Search flight";
+            this.toolTip1.SetToolTip(this.btn_search_flight, "Search a booked flight by the reference number");
             this.btn_search_flight.UseVisualStyleBackColor = false;
             this.btn_search_flight.Click += new System.EventHandler(this.btn_search_flight_Click);
             // 
@@ -574,6 +588,7 @@
             this.btn_cancel.Size = new System.Drawing.Size(154, 60);
             this.btn_cancel.TabIndex = 24;
             this.btn_cancel.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.btn_cancel, "Cancel the last changes");
             this.btn_cancel.UseVisualStyleBackColor = false;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
@@ -590,6 +605,7 @@
             this.btn_logout.Size = new System.Drawing.Size(154, 60);
             this.btn_logout.TabIndex = 25;
             this.btn_logout.Text = "Logout";
+            this.toolTip1.SetToolTip(this.btn_logout, "Logout from the account and return to the login form");
             this.btn_logout.UseVisualStyleBackColor = false;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
@@ -601,6 +617,7 @@
             this.admin_actions_time.Name = "admin_actions_time";
             this.admin_actions_time.Size = new System.Drawing.Size(298, 35);
             this.admin_actions_time.TabIndex = 26;
+            this.toolTip1.SetToolTip(this.admin_actions_time, "Flight time");
             // 
             // admin_action
             // 
@@ -645,8 +662,11 @@
             this.Controls.Add(this.cyanairScheduleDataGridView);
             this.Controls.Add(this.cyanairScheduleBindingNavigator);
             this.Controls.Add(this.admin_action);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cyanairScheduleBindingSource, "Time", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "t"));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "admin_actions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "admin_actions";
             this.Load += new System.EventHandler(this.admin_actions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cyanairDataSet)).EndInit();
@@ -707,5 +727,6 @@
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.TextBox admin_actions_time;
         private System.Windows.Forms.GroupBox admin_action;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

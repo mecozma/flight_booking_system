@@ -29,8 +29,10 @@ namespace Cyanair20012020
             
         }
 
+        // button event listener
         private void book_flights_button_Click(object sender, EventArgs e)
         {
+            //Display seatch_flights form
             search_flights.Show();
         }
 

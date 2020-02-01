@@ -75,6 +75,8 @@
             this.flight_no_comboBox = new System.Windows.Forms.ComboBox();
             this.selected_flight = new System.Windows.Forms.GroupBox();
             this.open_book_flight_form = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingNavigator)).BeginInit();
             this.cyanairAirportsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingSource)).BeginInit();
@@ -132,6 +134,7 @@
             this.search_flights_btn.Size = new System.Drawing.Size(154, 60);
             this.search_flights_btn.TabIndex = 10;
             this.search_flights_btn.Text = "Search ";
+            this.toolTip1.SetToolTip(this.search_flights_btn, "Search flights with the selected details");
             this.search_flights_btn.UseVisualStyleBackColor = false;
             this.search_flights_btn.Click += new System.EventHandler(this.search_flights_btn_Click);
             // 
@@ -150,6 +153,7 @@
             this.cancel_search_flights_btn.Size = new System.Drawing.Size(154, 60);
             this.cancel_search_flights_btn.TabIndex = 11;
             this.cancel_search_flights_btn.Text = "Go Back";
+            this.toolTip1.SetToolTip(this.cancel_search_flights_btn, "Return to the home view");
             this.cancel_search_flights_btn.UseVisualStyleBackColor = false;
             this.cancel_search_flights_btn.Click += new System.EventHandler(this.cancel_search_flights_btn_Click);
             // 
@@ -298,6 +302,7 @@
             this.from_airport_comboBox.Name = "from_airport_comboBox";
             this.from_airport_comboBox.Size = new System.Drawing.Size(180, 37);
             this.from_airport_comboBox.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.from_airport_comboBox, "Departure airport");
             this.from_airport_comboBox.ValueMember = "Airport Codes";
             // 
             // to_airport_comboBox
@@ -308,6 +313,7 @@
             this.to_airport_comboBox.Name = "to_airport_comboBox";
             this.to_airport_comboBox.Size = new System.Drawing.Size(180, 37);
             this.to_airport_comboBox.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.to_airport_comboBox, "Destination airport");
             // 
             // flight_direction
             // 
@@ -327,7 +333,6 @@
             this.flight_direction.Size = new System.Drawing.Size(782, 223);
             this.flight_direction.TabIndex = 30;
             this.flight_direction.TabStop = false;
-            this.flight_direction.Text = "Outbound Flight";
             // 
             // flight_date
             // 
@@ -337,6 +342,7 @@
             this.flight_date.Name = "flight_date";
             this.flight_date.Size = new System.Drawing.Size(178, 35);
             this.flight_date.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.flight_date, "Flight date");
             this.flight_date.Value = new System.DateTime(2020, 1, 22, 0, 0, 0, 0);
             // 
             // filtered_flights
@@ -472,6 +478,7 @@
             this.flight_no_comboBox.Name = "flight_no_comboBox";
             this.flight_no_comboBox.Size = new System.Drawing.Size(194, 37);
             this.flight_no_comboBox.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.flight_no_comboBox, "Select the desired flight number");
             this.flight_no_comboBox.SelectedIndexChanged += new System.EventHandler(this.flight_no_comboBox_SelectedIndexChanged);
             // 
             // selected_flight
@@ -504,8 +511,20 @@
             this.open_book_flight_form.Size = new System.Drawing.Size(154, 60);
             this.open_book_flight_form.TabIndex = 21;
             this.open_book_flight_form.Text = "Book Flight";
+            this.toolTip1.SetToolTip(this.open_book_flight_form, "Book the selected flight");
             this.open_book_flight_form.UseVisualStyleBackColor = false;
             this.open_book_flight_form.Click += new System.EventHandler(this.open_book_flight_form_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(941, 427);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(113, 24);
+            this.checkBox1.TabIndex = 33;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+         
             // 
             // search_flights
             // 
@@ -514,13 +533,16 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1448, 808);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.selected_flight);
             this.Controls.Add(this.filtered_flights);
             this.Controls.Add(this.cyanairAirportsBindingNavigator);
             this.Controls.Add(this.flight_direction);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "search_flights";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "search_flights";
             this.Load += new System.EventHandler(this.search_flights_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cyanairAirportsBindingNavigator)).EndInit();
@@ -588,5 +610,7 @@
         private System.Windows.Forms.ComboBox flight_no_comboBox;
         private System.Windows.Forms.GroupBox selected_flight;
         private System.Windows.Forms.Button open_book_flight_form;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

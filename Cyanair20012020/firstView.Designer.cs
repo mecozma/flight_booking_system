@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.company_motto = new System.Windows.Forms.Label();
             this.book_flights_button = new System.Windows.Forms.Button();
             this.adminUser = new System.Windows.Forms.Button();
             this.logo_label = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // company_motto
@@ -59,6 +61,7 @@
             this.book_flights_button.Size = new System.Drawing.Size(154, 60);
             this.book_flights_button.TabIndex = 1;
             this.book_flights_button.Text = "Book flights";
+            this.toolTip1.SetToolTip(this.book_flights_button, "Flight booking section");
             this.book_flights_button.UseVisualStyleBackColor = false;
             this.book_flights_button.Click += new System.EventHandler(this.book_flights_button_Click);
             // 
@@ -76,6 +79,7 @@
             this.adminUser.Size = new System.Drawing.Size(154, 60);
             this.adminUser.TabIndex = 2;
             this.adminUser.Text = "Admin user";
+            this.toolTip1.SetToolTip(this.adminUser, "Admin user login");
             this.adminUser.UseVisualStyleBackColor = false;
             this.adminUser.Click += new System.EventHandler(this.adminUser_Click);
             // 
@@ -101,7 +105,9 @@
             this.Controls.Add(this.book_flights_button);
             this.Controls.Add(this.company_motto);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "firstView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome view";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -114,6 +120,7 @@
         private System.Windows.Forms.Button book_flights_button;
         private System.Windows.Forms.Button adminUser;
         private System.Windows.Forms.Label logo_label;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
