@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.OleDb;
+
 namespace Cyanair20012020
 {
     public partial class book_flight : Form
@@ -120,6 +122,34 @@ namespace Cyanair20012020
             catch (System.Exception exceptionName)
             {
                 MessageBox.Show("Update failed \n:" + exceptionName);
+            }
+
+            //Remove one seat  from the schedule table when a ticket is booked
+            AppDomain.CurrentDomain.SetData("DataDirectory", @"\\prod\ServiceRequests");
+            //connection string
+            String strCon = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=cyanair.mdb";
+
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection(strCon))
+                {
+                    string flight_class = seat_ClassTextBox.Text;
+                    string fligh_number = search_flights.flight_no;
+                    string number_seats = "1";
+                    //connection to the database and filling the adapter with the queried data
+                    conn.Open();
+        //SQL connection string
+                    string strSql = "UPDATE CyanairSchedule SET " + flight_class = flight_class + " - " + number_seats + "WHERE Flight No LIKE '%" + flight_number + "%';";
+                       
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(new OleDbCommand(strSql, conn));
+                    
+                    //Database connection closed
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("The program is terminated with the following error: " + ex);
             }
         }
 
